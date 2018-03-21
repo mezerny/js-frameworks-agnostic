@@ -1,0 +1,28 @@
+<div class="table-responsive">
+    <table class="table table-striped">
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Add to invoice</th>
+            <th>Quantity</th>
+        </tr>
+        <tr ng-repeat="product in $ctrl.products" ng-init="product.amount = 1">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td><input type="checkbox" ng-model="product.selected" ng-true-value="true" ng-false-value="false"></td>
+            <td>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">-</button>
+                    <input type="number" class="btn btn-default" ng-model="product.amount" min="0" step="1"/>
+                    <button type="button" class="btn btn-default">+</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <input type="number" ng-model="$ctrl.discount" min="0" max="100"/>
+        Total: {{$ctrl.total()}}
+    </div>
+</div>

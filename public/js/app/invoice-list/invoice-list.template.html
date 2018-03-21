@@ -1,0 +1,19 @@
+<div class="table-responsive">
+    <table class="table table-striped">
+        <tr>
+            <th>id</th>
+            <th>Customer</th>
+            <th>Discount</th>
+            <th>Total</th>
+        </tr>
+        <tr ng-repeat="invoice in $ctrl.invoices">
+            <td>{{invoice.id}}</td>
+            <td>{{invoice.customer_id}}</td>
+            <td>{{invoice.dicount}}</td>
+            <td>{{invoice.total}}</td>
+        </tr>
+    </table>
+</div>
+<div>
+    <button type="button" class="btn btn-primary">Create new invoice</button>
+</div>

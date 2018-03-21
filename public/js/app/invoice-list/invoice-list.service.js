@@ -4,6 +4,9 @@ angular.module('invoiceList')
             all: {
                 method: 'GET',
                 isArray: true
+            },
+            save: {
+                method: 'POST'
             }
         })
     }]);

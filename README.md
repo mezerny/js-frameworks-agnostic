@@ -71,4 +71,12 @@ GET|POST          /api/invoices/{id}/items
 GET|PUT|DELETE    /api/invoices/{invoice_id}/items/{id}
 ```
 
+#Client side
+
+##Invoice form
+Since our products do not have image or description, I've decided to use simple table to browse all the products.
+It is easy to add pagination in the future if necessary (when API gets more robust)
+I've decided not to remove spinner arrows for amount control (just didn't want to spend time on that, could be removed with CSS)
+
+
        

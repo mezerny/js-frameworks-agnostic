@@ -1,0 +1,22 @@
+.input-narrow{
+    width: 30%;
+}
+.form-narrow{
+    width: 90%
+}
+table{
+    width: 100%
+}
+th.name{
+    width: 50%
+}
+th.price{
+    text-align: right;
+    width: 10%
+}
+td.check{
+    text-align: center;
+}
+td.price{
+    text-align: right
+}

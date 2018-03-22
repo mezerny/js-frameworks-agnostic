@@ -8,19 +8,21 @@ angular.module('invoiceForm')
                 var expression = $attrs.autoSaveForm || 'true';
 
                 $scope.$watchGroup(['$ctrl.totalSum', '$ctrl.discount', '$ctrl.customer'],function () {
-                    if ($formCtrl.$valid && $formCtrl.$dirty) {
+                    if ($formCtrl.$dirty) {
                         if (savePromise) {
                             $timeout.cancel(savePromise);
+                            $scope.$ctrl.countdownTimer.reset();
                         }
                         savePromise = $timeout(function () {
                             savePromise = null;
-                            if ($formCtrl.$valid) {
+                            if ($scope.$ctrl.totalSum > 0) {
                                 if ($scope.$eval(expression) !== false) {
                                     $log.info('Form data persisted -- setting pristine');
                                     $formCtrl.$setPristine();
                                 }
                             }
                         }, 5000);
+                        $scope.$ctrl.countdownTimer.start();
                     }
                 });
             }

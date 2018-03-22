@@ -79,4 +79,11 @@ It is easy to add pagination in the future if necessary (when API gets more robu
 I've decided not to remove spinner arrows for amount control (just didn't want to spend time on that, could be removed with CSS)
 
 
+I didn't spent a lot of efforts on visual part, so markup is not ideal for now.
+Also there is no validation for the input fields here. This could be done later if necessary.
+Right now there is no fields that can be used in an incorrect way (at least at first sight)   
+
+ 
+
+
        

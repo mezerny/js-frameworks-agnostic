@@ -8,7 +8,7 @@ table{
     width: 100%
 }
 th.name{
-    width: 50%
+    width: 40%
 }
 th.price{
     text-align: right;
@@ -19,4 +19,12 @@ td.check{
 }
 td.price{
     text-align: right
+}
+.app-modal-window .modal-dialog {
+    width: 900px;
+    border: 20px
+}
+
+.app-modal-window .modal-content{
+    padding: 20px;
 }

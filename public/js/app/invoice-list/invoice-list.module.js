@@ -1,1 +1,1 @@
-angular.module('invoiceList', ['ngRoute', 'ngResource']);
+angular.module('invoiceList', ['ngRoute', 'ngResource', 'ui.bootstrap']);

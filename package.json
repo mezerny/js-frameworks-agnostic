@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "angular-auto-save-form": "^1.5.1",
     "body-parser": "1.15.2",
+    "cors": "2.8.1",
     "express": "~4.13.4",
-    "sequelize": "^3.20.0",
-    "sqlite3": "latest",
     "lodash": "latest",
-    "cors": "2.8.1"
+    "sequelize": "^3.20.0",
+    "sqlite3": "latest"
   }
 }

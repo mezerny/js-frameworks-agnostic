@@ -1,1 +1,1 @@
-angular.module('productList', ['ngRoute', 'ngResource']);
+angular.module('productList', ['ngRoute', 'ngResource', 'ui.bootstrap']);

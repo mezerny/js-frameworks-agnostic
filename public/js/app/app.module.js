@@ -1,1 +1,1 @@
-angular.module('mockApp', ['ngRoute', 'ngResource', 'invoiceList', 'customerList', 'productList', 'invoiceForm']);
+angular.module('mockApp', ['ngRoute', 'ngResource', 'invoiceList', 'customerList', 'productList', 'invoiceForm', 'ui.bootstrap']);

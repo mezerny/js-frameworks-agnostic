@@ -1,43 +1,15 @@
-<div>
-    <select class="form-control" ng-model="$ctrl.customer"
-            ng-options="customer.name for customer in $ctrl.customers"></select>
-</div>
 <div class="table-responsive">
     <table class="table table-striped">
         <tr>
             <th>id</th>
-            <th class="name">Name</th>
-            <th class="price">Price</th>
-            <th class="check">Add to invoice</th>
-            <th class="quantity">Quantity</th>
+            <th>Namer</th>
+            <th>Address</th>
+            <th>Phone</th>
         </tr>
-        <tr ng-repeat="product in $ctrl.products" ng-init="product.amount = 1">
+        <tr ng-repeat="product in $ctrl.products">
             <td>{{product.id}}</td>
             <td>{{product.name}}</td>
-            <td class="price">{{product.price}}</td>
-            <td class="check"><input type="checkbox" ng-model="product.selected" ng-true-value="true" ng-false-value="false"></td>
-            <td>
-                <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn btn-danger" ng-click="product.amount = product.amount - 1">-
-                    </button>
-                    <input type="number" class="btn btn-default input-narrow" ng-model="product.amount" min="0"
-                           step="1"/>
-                    <button type="button" class="btn btn-success" ng-click="product.amount = product.amount + 1">+
-                    </button>
-                </div>
-            </td>
-
+            <td>{{product.price}}</td>
         </tr>
     </table>
-    <form class="form-inline">
-        <div class="form-group form-narrow">
-            <div class="input-group input-narrow">
-                <div class="input-group-addon">Discount</div>
-                <input type="number" class="form-control" ng-model="$ctrl.discount" min="0" max="100"/>
-                <div class="input-group-addon">%</div>
-            </div>
-        </div>
-        <button class="btn btn-primary" ng-click="$ctrl.saveInvoice()">Save invoice</button>
-        <span class="text-info">Total: {{$ctrl.total()}}</span>
-    </form>
 </div>

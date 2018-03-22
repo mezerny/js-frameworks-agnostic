@@ -1,1 +1,1 @@
-angular.module('invoiceForm', ['ngRoute', 'ngResource']);
+angular.module('invoiceForm', ['ngRoute', 'ngResource', 'ui.bootstrap']);
